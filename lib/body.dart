@@ -62,7 +62,7 @@ class _BodyState extends State<Body> {
                   return const CouponBanner();
                 }),
           ),
-          SizedBox(height: getProportionateScreenHeight(20)),
+          SizedBox(height: getProportionateScreenHeight(23)),
           Padding(
             padding: const EdgeInsets.only(left: 24.0),
             child: Text("Start crafting",
@@ -73,8 +73,8 @@ class _BodyState extends State<Body> {
           SizedBox(height: getProportionateScreenHeight(10)),
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: getProportionateScreenWidth(9),
-                vertical: getProportionateScreenHeight(1)),
+                horizontal: getProportionateScreenWidth(16),
+                vertical: getProportionateScreenHeight(3)),
                child: SelectPlatters()
 
 
