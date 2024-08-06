@@ -32,7 +32,14 @@ class MenuCard extends StatelessWidget {
             width: getProportionateScreenWidth(160), // Container width
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              color: Colors.white,
+              gradient: LinearGradient(
+                colors: [
+                  Color(0xFFE1E1F5), // Light deep purple
+                  Color(0xFFB8B8C8), // Dark deep purple
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
               border: Border.all(
                 color: kSecondaryTextColor.withOpacity(0.2),
                 width: 1.0,
@@ -46,22 +53,78 @@ class MenuCard extends StatelessWidget {
                 ),
               ],
             ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(7), // Same as the container's border radius
-              child: Image.asset(
-                'assets/images/Meal Boxes.png', // Replace with your image path
-                fit: BoxFit.cover, // Ensures the image covers the entire container
-                width: double.infinity,
-                height: double.infinity,
-              ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 9.0,top: 15),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Text("Meal Boxes",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                              SizedBox(width: 20,),
+                              Container(
+                                width: 30.0,
+                                height: 30.0,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF4B0082), // Deep purple color
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Icon(
+                                  Icons.arrow_forward, // White arrow icon
+                                  color: Colors.white,
+                                  size: 20.0, // Size of the arrow icon
+                                ),
+                              ),
+                            ],
+                          ),
+
+                          Row(
+                            children: [
+                              Icon(Icons.person,color: Colors.deepPurple,),
+                              Text(
+                                'Min 10 Guests',
+                                style: TextStyle(fontSize: 12.0,color: Color(0xFF6A0D91),),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+
+                  ],
+                ),
+                SizedBox(height: 25,),
+                ClipRRect(
+
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(17.0), // Adjust the radius as needed
+                    bottomRight: Radius.circular(17.0), // Adjust the radius as needed
+                  ),
+                  child: Image.asset(
+                    'assets/images/Mask group (1).png',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
             ),
           ),
           SizedBox(width: 8,),
           Container(
-            width: getProportionateScreenWidth(163), // Container width
+            width: getProportionateScreenWidth(160), // Container width
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              color: Colors.white,
+              gradient: LinearGradient(
+                colors: [
+                  Color(0xFFF0CCF0),
+                  Color(0xFFD291BC),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
               border: Border.all(
                 color: kSecondaryTextColor.withOpacity(0.2),
                 width: 1.0,
@@ -75,14 +138,63 @@ class MenuCard extends StatelessWidget {
                 ),
               ],
             ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(9), // Same as the container's border radius
-              child: Image.asset(
-                'assets/images/Meal Boxes (1).png', // Replace with your image path
-                fit: BoxFit.cover, // Ensures the image covers the entire container
-                width: double.infinity,
-                height: double.infinity,
-              ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 9.0,top: 15),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Text("Catering",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                              SizedBox(width: 40,),
+                              Container(
+                                width: 30.0,
+                                height: 30.0,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFC2185B), // Deep purple color
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Icon(
+                                  Icons.arrow_forward, // White arrow icon
+                                  color: Colors.white,
+                                  size: 20.0, // Size of the arrow icon
+                                ),
+                              ),
+                            ],
+                          ),
+
+                          Row(
+                            children: [
+                              Icon(Icons.person,color: Colors.pink,),
+                              Text(
+                                'Min 120 Guests',
+                                style: TextStyle(fontSize: 12.0,color: Color(0xFFC2185B),),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+
+                  ],
+                ),
+
+                ClipRRect(
+
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(17.0), // Adjust the radius as needed
+                    bottomRight: Radius.circular(17.0), // Adjust the radius as needed
+                  ),
+                  child: Image.asset(
+                    'assets/images/Clip path group (2).png',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
             ),
           ),
         ],

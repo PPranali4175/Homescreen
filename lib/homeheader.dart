@@ -53,7 +53,7 @@ class HomeHeader extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: getProportionateScreenWidth(3)),
-                Image.asset('assets/images/Vector (2).png')
+                Icon(Icons.arrow_drop_down,color: Colors.grey,)
               ],
             ),
             Text("How it works?",

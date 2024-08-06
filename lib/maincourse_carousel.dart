@@ -46,7 +46,7 @@ class MainCourse extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
               children: [
                 Text("6 Categories & 9 Items",style: TextStyle(color: Colors.deepPurple,fontSize: 14
                 ),),
@@ -65,8 +65,81 @@ class MainCourse extends StatelessWidget {
           Image.asset('assets/images/Line 1.png',color: Colors.grey),
           SizedBox(height: 7,),
           Padding(
-            padding: const EdgeInsets.only(left: 8.0),
-            child: Image.asset('assets/images/Frame 1000004958.png'),
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Starts at',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 14,
+                      ),
+                    ),
+                    SizedBox(width: 5,),
+                    Text("₹299",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                    Row(
+                      children: [
+                        SizedBox(width: 90,),
+                        Icon(Icons.person, color: Colors.grey, size: 16),
+                        SizedBox(width: 4),
+                        Text(
+                          '10 - 600',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(height: 4),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Icon(Icons.star, color: Colors.yellow, size: 16),
+                    SizedBox(width: 4),
+                    Text(
+                      '₹219',
+                      style: TextStyle(
+                        color: Colors.purple,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text("/ Person",style: TextStyle(color: Colors.grey),),
+                    SizedBox(width: 8),
+                    Icon(Icons.arrow_downward, color: Colors.green,size: 16,),
+                    Text(
+                      '20%',
+                      style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 4),
+                Row(
+                  children: [
+                    Text(
+                      'with Dynamic Price For',
+                      style: TextStyle(
+                        color: Colors.purple,
+                        fontSize: 14,
+                      ),
+                    ),
+                    SizedBox(width: 5,),
+                    Text("100 Guests",style: TextStyle(color: Colors.black),)
+                  ],
+                ),
+
+              ],
+            ),
           ),
 
         ],

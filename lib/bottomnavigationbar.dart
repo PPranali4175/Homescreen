@@ -32,18 +32,42 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center, // Center the row items
           children: <Widget>[
-            IconButton(
-              icon: Image.asset(
-                'assets/images/Frame 8.png', // Replace with your image path
-                height: containerHeight, // Match icon height to container height
-                width: containerHeight, // Match icon width to container height
-              ),
-              iconSize: containerHeight,
-              onPressed: () {
-                // Handle profile icon tap
+        Column(
+          children: [
+            SizedBox(height: 15,),
+            Material(
+            shape: CircleBorder(), // Make sure the material has a circular shape
+             color: Colors.grey,// Background color of the circle
+            child: InkWell(
+              customBorder: CircleBorder(), // For ripple effect within the circle
+              onTap: () {
+                // Handle icon tap
               },
+              child: Container(
+                width: 35, // Diameter of the circle
+                height: 35,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: Colors.grey, // Border color
+                    width: 2, // Border width
+                  ),
+                ),
+                alignment: Alignment.center,
+                child: Icon(
+                  Icons.person,
+                  color: Colors.white,
+                  size: 30, // Size of the icon
+                ),
+              ),
             ),
-            SizedBox(width: 5), // Space between first and second icon
+      ),
+            Text("Profile",style: TextStyle(color: Colors.grey),)
+          ],
+        ),
+
+
+            SizedBox(width: 6), // Space between first and second icon
             Stack(
               children: [
                 IconButton(
@@ -84,19 +108,43 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                   ),
               ],
             ),
-            SizedBox(width: 5), // Space between second and third icon
-            IconButton(
-              icon: Image.asset(
-                'assets/images/Frame 5.png', // Replace with your image path
-                height: containerHeight, // Match icon height to container height
-                width: containerHeight, // Match icon width to container height
-              ),
-              iconSize: containerHeight, // Ensures the IconButton matches the size
-              onPressed: () {
-                setState(() {
-                  _isSecondIconChanged = !_isSecondIconChanged; // Toggle the state
-                });
-              },
+            SizedBox(width: 6), // Space between second and third icon
+            Column(
+              children: [
+                SizedBox(height: 15,),
+                Material(
+                  shape: CircleBorder(), // Make sure the material has a circular shape
+                  color: Colors.white,// Background color of the circle
+                  child: InkWell(
+                    customBorder: CircleBorder(), // For ripple effect within the circle
+                    onTap: () {
+                      setState(() {
+                        _isSecondIconChanged = !_isSecondIconChanged; // Toggle the state
+                      });
+
+                      // Handle icon tap
+                    },
+                    child: Container(
+                      width: 35, // Diameter of the circle
+                      height: 35,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.grey, // Border color
+                          width: 2, // Border width
+                        ),
+                      ),
+                      alignment: Alignment.center,
+                      child: Icon(
+                        Icons.restaurant,
+                        color: Colors.grey,
+                        size: 20, // Size of the icon
+                      ),
+                    ),
+                  ),
+                ),
+                Text("Orders",style: TextStyle(color: Colors.grey),)
+              ],
             ),
           ],
         ),

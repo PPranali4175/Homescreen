@@ -81,7 +81,7 @@ class _BodyState extends State<Body> {
           ),
           SizedBox(height: getProportionateScreenHeight(4)),
           SizedBox(
-            height: getProportionateScreenHeight(220),
+            height: getProportionateScreenHeight(225),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -130,8 +130,21 @@ class _BodyState extends State<Body> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Image.asset("assets/images/Frame 1000004854.png"),
-                    SizedBox(height: 7,),
+                    Row(
+                      children: [
+                        Text("Delivery Box",style: TextStyle(color: Colors.deepPurple,fontWeight: FontWeight.bold,fontSize: 17),),
+                        SizedBox(width: 5,),
+                        Text("(",style: TextStyle(color: Colors.grey),),
+                        Icon(Icons.person,color: Colors.grey,),
+                        Text(
+                          'Min 10 - Max 120',
+                          style: TextStyle(fontSize: 15.0,color: Colors.grey,),
+                        ),
+                        SizedBox(width: 5,),
+                        Text(")",style: TextStyle(color: Colors.grey),)
+                      ],
+                    ),
+                    SizedBox(height: 6,),
                     Text("Best for small gatherings and house-parties",style: TextStyle(color: Colors.grey),)
                   ],
                 ),
@@ -145,7 +158,7 @@ class _BodyState extends State<Body> {
               ],
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: 13,),
           Padding(
             padding: EdgeInsets.only(
                 left: getProportionateScreenWidth(24),
@@ -174,7 +187,20 @@ class _BodyState extends State<Body> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Image.asset("assets/images/Frame 1000004848.png"),
+                    Row(
+                      children: [
+                        Text("Meal Box",style: TextStyle(color: Colors.deepPurple,fontWeight: FontWeight.bold,fontSize: 17),),
+                        SizedBox(width: 5,),
+                        Text("(",style: TextStyle(color: Colors.grey),),
+                        Icon(Icons.person,color: Colors.grey,),
+                        Text(
+                          'Min 10',
+                          style: TextStyle(fontSize: 15.0,color: Colors.grey,),
+                        ),
+                        SizedBox(width: 5,),
+                        Text(")",style: TextStyle(color: Colors.grey),)
+                      ],
+                    ),
                     SizedBox(height: 7,),
                     Text("Individually packed meal boxes of happiness!",style: TextStyle(color: Colors.grey),)
                   ],
@@ -198,7 +224,20 @@ class _BodyState extends State<Body> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Image.asset("assets/images/Frame 1000004854 (1).png"),
+                    Row(
+                      children: [
+                        Text("Catering Menus",style: TextStyle(color: Colors.deepPurple,fontWeight: FontWeight.bold,fontSize: 17),),
+                        SizedBox(width: 5,),
+                        Text("(",style: TextStyle(color: Colors.grey),),
+                        Icon(Icons.person,color: Colors.grey,),
+                        Text(
+                          'Min 200',
+                          style: TextStyle(fontSize: 15.0,color: Colors.grey,),
+                        ),
+                        SizedBox(width: 5,),
+                        Text(")",style: TextStyle(color: Colors.grey),)
+                      ],
+                    ),
                     SizedBox(height: 7,),
                     Text("Best for weddings, Corporate Events, Birthdays etc",style: TextStyle(color: Colors.grey),)
                   ],
@@ -228,10 +267,7 @@ class _BodyState extends State<Body> {
             ),
           ),
           SizedBox(height: getProportionateScreenHeight(30)),
-          Padding(
-            padding: const EdgeInsets.only(left: 75.0,),
-            child: Text("   <---- You Customize, We Cater! ---->",style: TextStyle(color: Colors.grey),),
-          ),
+          Center(child: Text("<---- You Customize, We Cater! ---->",style: TextStyle(color: Colors.grey),)),
           SizedBox(height: getProportionateScreenHeight(30)),
 
         ],
